@@ -1,42 +1,42 @@
 // Items rendered as in-game loot tooltips, colour-coded by rarity.
 const items = [
   {
-    rarity: "Almindelig",
+    rarity: "Common",
     color: "var(--color-muted)",
-    name: "Jernklinge",
+    name: "Iron Blade",
     stats: [
-      ["Skade", "12 – 18"],
-      ["Angrebshast.", "1.6"],
+      ["Damage", "12 – 18"],
+      ["Attack speed", "1.6"],
     ],
   },
   {
-    rarity: "Magisk",
+    rarity: "Magic",
     color: "var(--color-magic)",
-    name: "Tidevandets Stav",
+    name: "Tidecaller Staff",
     stats: [
-      ["Magisk skade", "34 – 51"],
+      ["Spell damage", "34 – 51"],
       ["+ Mana", "18%"],
-      ["Affix", "Kulde"],
+      ["Affix", "Frost"],
     ],
   },
   {
-    rarity: "Sjælden",
+    rarity: "Rare",
     color: "var(--color-gold)",
-    name: "Gravhøjens Plade",
+    name: "Barrow Plate",
     stats: [
-      ["Rustning", "240"],
-      ["+ Liv", "+85"],
-      ["+ Modstand", "Alle 12%"],
+      ["Armor", "240"],
+      ["+ Life", "+85"],
+      ["+ Resist", "All 12%"],
     ],
   },
   {
-    rarity: "Unik",
+    rarity: "Unique",
     color: "var(--color-ember)",
-    name: "Den Faldne Stjerne",
+    name: "The Fallen Star",
     stats: [
-      ["Effekt", "Stjernefald"],
-      ["+ Krit", "35%"],
-      ["Kilde", "Pinnacle-boss"],
+      ["Effect", "Starfall"],
+      ["+ Crit", "35%"],
+      ["Source", "Pinnacle boss"],
     ],
   },
 ];
@@ -46,11 +46,10 @@ export default function Items() {
     <section className="section" id="items">
       <div className="container">
         <span className="eyebrow">Custom · Items</span>
-        <h2 className="section-title">Loot der ændrer din build</h2>
+        <h2 className="section-title">Loot that changes your build</h2>
         <p className="section-lead">
-          Et eget item-system med sjældenhedsgrader, affixes og unikke
-          genstande. De bedste fund definerer ikke bare dine tal — de ændrer
-          hvordan du spiller.
+          A custom item system with rarity tiers, affixes and unique gear. The
+          best finds don't just bump your numbers — they change how you play.
         </p>
 
         <div className="loot-grid">

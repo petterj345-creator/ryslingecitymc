@@ -1,34 +1,34 @@
 const bosses = [
   {
     glyph: "🜂",
-    name: "Askekongen",
-    kicker: "Verdensboss · Tier 1",
-    desc: "En brændende kolos i tre faser. Overlev hans ild-storm og få chance for hans signatur-våben.",
+    name: "The Ash King",
+    kicker: "World Boss · Tier 1",
+    desc: "A burning colossus in three phases. Survive his firestorm for a chance at his signature weapon.",
   },
   {
     glyph: "🜄",
-    name: "Dybets Vogter",
-    kicker: "Verdensboss · Tier 2",
-    desc: "Lurer i de oversvømmede dybder. Kræver et koordineret hold og det rigtige gear.",
+    name: "Warden of the Deep",
+    kicker: "World Boss · Tier 2",
+    desc: "Lurking in the flooded depths. Demands a coordinated team and the right gear.",
   },
   {
     glyph: "🜁",
-    name: "Den Faldne Stjerne",
+    name: "The Fallen Star",
     kicker: "Pinnacle · Endgame",
-    desc: "Serverens hårdeste encounter. Kun de bedst udstyrede holds slipper levende fra arenaen.",
+    desc: "The server's hardest encounter. Only the best-equipped teams leave the arena alive.",
   },
 ];
 
 export default function Bosses() {
   return (
-    <section className="section" id="bosser">
+    <section className="section" id="bosses">
       <div className="container">
-        <span className="eyebrow">Custom · Bosser</span>
-        <h2 className="section-title">Kampe der kræver en plan</h2>
+        <span className="eyebrow">Custom · Bosses</span>
+        <h2 className="section-title">Fights that demand a plan</h2>
         <p className="section-lead">
-          Hver boss har sine egne mekanikker, faser og garanterede drops. Lær
-          mønstrene, byg dit hold, og tag kampen op mod serverens stærkeste
-          fjender.
+          Every boss has its own mechanics, phases and guaranteed drops. Learn
+          the patterns, build your team, and take on the strongest enemies on
+          the server.
         </p>
 
         <div className="grid-auto">

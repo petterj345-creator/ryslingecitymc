@@ -143,6 +143,13 @@ h1, h2, h3 {
 }
 .btn-ghost:hover { border-color: var(--color-gold); color: var(--color-gold-bright); }
 
+.btn-discord {
+  background: #5865f2;
+  color: #fff;
+  box-shadow: 0 8px 26px -12px rgba(88, 101, 242, 0.8);
+}
+.btn-discord:hover { background: #4752e0; }
+
 /* ---------- top nav ---------- */
 .nav {
   position: sticky;
@@ -174,6 +181,11 @@ h1, h2, h3 {
   place-items: center;
   color: var(--color-gold);
 }
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
 .nav-links {
   display: none;
   gap: 1.6rem;
@@ -183,6 +195,64 @@ h1, h2, h3 {
 .nav-links a:hover { color: var(--color-bone); }
 @media (min-width: 860px) {
   .nav-links { display: flex; }
+}
+.nav-discord {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 9px;
+  background: #5865f2;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.18s ease;
+}
+.nav-discord:hover { background: #4752e0; }
+.nav-discord-label { display: none; }
+@media (min-width: 520px) {
+  .nav-discord-label { display: inline; }
+}
+
+/* hero top row: eyebrow + live status side by side */
+.hero-toprow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem 1.2rem;
+}
+
+/* live player-count pill */
+.live-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--color-line-strong);
+  border-radius: 99px;
+  background: rgba(236, 230, 214, 0.03);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-faint);
+  flex-shrink: 0;
+}
+.live-status.on { color: var(--color-bone); border-color: rgba(70, 209, 127, 0.4); }
+.live-status.on .live-dot {
+  background: #46d17f;
+  box-shadow: 0 0 8px #46d17f;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+.live-status.off .live-dot { background: var(--color-ember); }
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
 }
 
 /* ---------- hero ---------- */
@@ -539,6 +609,8 @@ h1, h2, h3 {
   font-size: 0.88rem;
 }
 .footer-inner { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center; }
+.footer-meta { display: inline-flex; align-items: center; gap: 1.2rem; }
+.footer-meta a:hover { color: var(--color-bone); }
 
 /* ---------- admin ---------- */
 .admin-shell { min-height: 100dvh; padding-block: 3rem; }

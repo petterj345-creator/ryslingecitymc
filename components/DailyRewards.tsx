@@ -1,23 +1,22 @@
 const days = [
-  { d: "Dag 1", reward: "🪙", amt: "Mønter" },
-  { d: "Dag 2", reward: "🧪", amt: "Buffs" },
-  { d: "Dag 3", reward: "🗝", amt: "Kort-nøgle" },
-  { d: "Dag 4", reward: "🪙", amt: "Mønter ×2" },
-  { d: "Dag 5", reward: "📦", amt: "Loot-kiste" },
-  { d: "Dag 6", reward: "🧪", amt: "Buffs ×2" },
-  { d: "Dag 7", reward: "💎", amt: "Sjælden kiste", big: true },
+  { d: "Day 1", reward: "🪙", amt: "Coins" },
+  { d: "Day 2", reward: "🧪", amt: "Buffs" },
+  { d: "Day 3", reward: "🗝", amt: "Map key" },
+  { d: "Day 4", reward: "🪙", amt: "Coins ×2" },
+  { d: "Day 5", reward: "📦", amt: "Loot crate" },
+  { d: "Day 6", reward: "🧪", amt: "Buffs ×2" },
+  { d: "Day 7", reward: "💎", amt: "Rare crate", big: true },
 ];
 
 export default function DailyRewards() {
   return (
-    <section className="section" id="belonninger">
+    <section className="section" id="rewards">
       <div className="container">
-        <span className="eyebrow">Hver dag · Belønninger</span>
-        <h2 className="section-title">Byg din streak op</h2>
+        <span className="eyebrow">Every day · Rewards</span>
+        <h2 className="section-title">Build your streak</h2>
         <p className="section-lead">
-          Log ind hver dag og saml stigende belønninger. Hold streaken i live
-          hele ugen for den store kiste — og kom tilbage til en ny række hver
-          uge.
+          Log in every day to collect rising rewards. Keep the streak alive all
+          week for the big crate — and come back to a fresh row every week.
         </p>
 
         <div className="streak">

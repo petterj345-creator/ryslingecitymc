@@ -19,31 +19,31 @@ import {
 export const dynamic = "force-dynamic";
 
 const ERRORS: Record<string, string> = {
-  "1": "Forkert adgangskode.",
-  title: "Titel må ikke være tom.",
-  save: "Kunne ikke gemme. Tjek at server-nøglen er sat korrekt.",
+  "1": "Wrong password.",
+  title: "Title can't be empty.",
+  save: "Couldn't save. Check that the service role key is set correctly.",
 };
 
 function Fields({ item }: { item?: RoadmapItem }) {
   return (
     <>
       <div className="field">
-        <label>Titel</label>
+        <label>Title</label>
         <input
           className="input"
           name="title"
           defaultValue={item?.title ?? ""}
-          placeholder="F.eks. Kort-systemet"
+          placeholder="e.g. Map system"
           required
         />
       </div>
       <div className="field">
-        <label>Beskrivelse</label>
+        <label>Description</label>
         <textarea
           className="textarea"
           name="description"
           defaultValue={item?.description ?? ""}
-          placeholder="Kort beskrivelse af featuren…"
+          placeholder="Short description of the feature…"
         />
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
@@ -58,7 +58,7 @@ function Fields({ item }: { item?: RoadmapItem }) {
           </select>
         </div>
         <div className="field">
-          <label>Kategori</label>
+          <label>Category</label>
           <select className="select" name="category" defaultValue={item?.category ?? "general"}>
             {CATEGORIES.map((c) => (
               <option key={c} value={c}>
@@ -70,7 +70,7 @@ function Fields({ item }: { item?: RoadmapItem }) {
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: "1rem" }}>
         <div className="field">
-          <label>Fremgang %</label>
+          <label>Progress %</label>
           <input
             className="input"
             name="progress"
@@ -81,16 +81,16 @@ function Fields({ item }: { item?: RoadmapItem }) {
           />
         </div>
         <div className="field">
-          <label>Mål</label>
+          <label>Target</label>
           <input
             className="input"
             name="target"
             defaultValue={item?.target ?? ""}
-            placeholder="Sæson 1"
+            placeholder="Season 1"
           />
         </div>
         <div className="field">
-          <label>Sortering</label>
+          <label>Sort order</label>
           <input
             className="input"
             name="sort_order"
@@ -117,13 +117,13 @@ export default async function AdminPage({
         <div className="container">
           <div className="admin-card">
             <span className="eyebrow">Admin</span>
-            <h1 style={{ fontSize: "1.8rem", marginTop: "0.8rem" }}>Log ind</h1>
+            <h1 style={{ fontSize: "1.8rem", marginTop: "0.8rem" }}>Log in</h1>
             <p style={{ color: "var(--color-muted)", margin: "0.6rem 0 1.4rem" }}>
-              Adgang til visionsboardet.
+              Access to the vision board.
             </p>
             <form action={loginAction}>
               <div className="field">
-                <label>Adgangskode</label>
+                <label>Password</label>
                 <input
                   className="input"
                   type="password"
@@ -132,16 +132,16 @@ export default async function AdminPage({
                   required
                 />
               </div>
-              {error && <div className="error-text">{ERRORS[error] ?? "Der skete en fejl."}</div>}
+              {error && <div className="error-text">{ERRORS[error] ?? "Something went wrong."}</div>}
               <button className="btn btn-primary" type="submit" style={{ width: "100%", marginTop: "0.6rem" }}>
-                Log ind
+                Log in
               </button>
             </form>
             <Link
               href="/"
               style={{ display: "inline-block", marginTop: "1.2rem", color: "var(--color-faint)", fontSize: "0.88rem" }}
             >
-              ← Tilbage til siden
+              ← Back to the site
             </Link>
           </div>
         </div>
@@ -161,16 +161,16 @@ export default async function AdminPage({
       <div className="container">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
           <div>
-            <span className="eyebrow">Admin · Visionsboard</span>
-            <h1 style={{ fontSize: "2rem", marginTop: "0.6rem" }}>Administrér boardet</h1>
+            <span className="eyebrow">Admin · Vision Board</span>
+            <h1 style={{ fontSize: "2rem", marginTop: "0.6rem" }}>Manage the board</h1>
           </div>
           <div style={{ display: "flex", gap: "0.8rem" }}>
             <Link className="btn btn-ghost" href="/">
-              Se siden
+              View site
             </Link>
             <form action={logoutAction}>
               <button className="btn btn-ghost" type="submit">
-                Log ud
+                Log out
               </button>
             </form>
           </div>
@@ -178,24 +178,24 @@ export default async function AdminPage({
 
         {error && (
           <div className="error-text" style={{ marginTop: "1rem" }}>
-            {ERRORS[error] ?? "Der skete en fejl."}
+            {ERRORS[error] ?? "Something went wrong."}
           </div>
         )}
 
         {/* New item */}
         <div className="admin-card" style={{ maxWidth: "100%", margin: "2rem 0" }}>
-          <h2 style={{ fontSize: "1.3rem", marginBottom: "1.2rem" }}>Tilføj ny feature</h2>
+          <h2 style={{ fontSize: "1.3rem", marginBottom: "1.2rem" }}>Add a new feature</h2>
           <form action={createItemAction}>
             <Fields />
             <button className="btn btn-primary" type="submit" style={{ marginTop: "0.5rem" }}>
-              Tilføj til boardet
+              Add to the board
             </button>
           </form>
         </div>
 
         {/* Existing items */}
         <h2 style={{ fontSize: "1.3rem", margin: "2rem 0 1.2rem" }}>
-          Eksisterende ({items.length})
+          Existing ({items.length})
         </h2>
         {items.map((item) => (
           <div className="admin-card" style={{ maxWidth: "100%", margin: "0 0 1.2rem" }} key={item.id}>
@@ -204,14 +204,14 @@ export default async function AdminPage({
               <Fields item={item} />
               <div style={{ display: "flex", gap: "0.8rem", marginTop: "0.5rem" }}>
                 <button className="btn btn-primary" type="submit">
-                  Gem ændringer
+                  Save changes
                 </button>
               </div>
             </form>
             <form action={deleteItemAction} style={{ marginTop: "0.8rem" }}>
               <input type="hidden" name="id" value={item.id} />
               <button className="btn btn-ghost" type="submit" style={{ color: "var(--color-ember)" }}>
-                Slet
+                Delete
               </button>
             </form>
           </div>

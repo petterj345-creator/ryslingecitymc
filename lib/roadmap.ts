@@ -25,18 +25,18 @@ export interface RoadmapItem {
 export const STATUS_ORDER: Status[] = ["in_progress", "planned", "done"];
 
 export const STATUS_LABELS: Record<Status, string> = {
-  planned: "Planlagt",
-  in_progress: "I gang",
-  done: "Udgivet",
+  planned: "Planned",
+  in_progress: "In progress",
+  done: "Released",
 };
 
 export const CATEGORY_LABELS: Record<Category, string> = {
-  maps: "Kort",
-  bosses: "Bosser",
+  maps: "Maps",
+  bosses: "Bosses",
   items: "Items",
-  classes: "Klasser",
-  rewards: "Belønninger",
-  general: "Generelt",
+  classes: "Classes",
+  rewards: "Rewards",
+  general: "General",
 };
 
 export const CATEGORIES = Object.keys(CATEGORY_LABELS) as Category[];

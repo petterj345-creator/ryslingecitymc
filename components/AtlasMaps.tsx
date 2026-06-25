@@ -13,7 +13,7 @@ const nodes: Node[] = [
   { id: 7, x: 480, y: 280, tier: 8 },
   { id: 8, x: 620, y: 110, tier: 12 },
   { id: 9, x: 630, y: 240, tier: 11 },
-  { id: 10, x: 770, y: 180, tier: 16, label: "Pinacle" },
+  { id: 10, x: 770, y: 180, tier: 16, label: "Pinnacle" },
 ];
 
 const links: [number, number][] = [
@@ -30,15 +30,15 @@ function tierColor(tier: number): string {
 
 export default function AtlasMaps() {
   return (
-    <section className="section" id="kort">
+    <section className="section" id="maps">
       <div className="container">
-        <span className="eyebrow">Endgame · Kort</span>
-        <h2 className="section-title">Et atlas der bliver ved at vokse</h2>
+        <span className="eyebrow">Endgame · Maps</span>
+        <h2 className="section-title">An atlas that keeps growing</h2>
         <p className="section-lead">
-          Kort er kernen i endgame. Hvert kort er sin egen instans med
-          modifiers, der skruer op for både fare og belønning. Kæd dem sammen,
-          opgrader dem, og pres dig vej mod de højeste tiers — hvor de bedste
-          drops gemmer sig.
+          Maps are the core of the endgame. Each one is its own instance with
+          modifiers that crank up both the danger and the reward. Chain them,
+          upgrade them, and push toward the highest tiers — where the best drops
+          are hiding.
         </p>
 
         <div className="atlas-wrap">
@@ -46,7 +46,7 @@ export default function AtlasMaps() {
             viewBox="0 0 840 400"
             width="100%"
             role="img"
-            aria-label="Kort-atlas med stigende tiers fra start til pinnacle"
+            aria-label="Map atlas with rising tiers from start to pinnacle"
           >
             <g stroke="var(--color-line-strong)" strokeWidth="1.5">
               {links.map(([a, b], i) => (
@@ -100,23 +100,23 @@ export default function AtlasMaps() {
               MODIFIERS
             </div>
             <h3 style={{ marginTop: "0.7rem", fontSize: "1.2rem" }}>
-              Skru op for indsatsen
+              Raise the stakes
             </h3>
             <p style={{ marginTop: "0.5rem", color: "var(--color-muted)", fontSize: "0.95rem" }}>
-              Hvert kort kan rulles med modifiers. Mere fare betyder bedre loot
-              — du bestemmer selv risikoen.
+              Every map can be rolled with modifiers. More danger means better
+              loot — you decide how much risk to take on.
             </p>
           </div>
           <div className="atlas-node-card">
             <div className="tier-badge" style={{ color: "var(--color-arcane-bright)" }}>
-              OPGRADERING
+              UPGRADING
             </div>
             <h3 style={{ marginTop: "0.7rem", fontSize: "1.2rem" }}>
-              Form dit atlas
+              Shape your atlas
             </h3>
             <p style={{ marginTop: "0.5rem", color: "var(--color-muted)", fontSize: "0.95rem" }}>
-              Brug fund til at hæve tier og forbedre dropraterne på de kort, du
-              vil køre igen og igen.
+              Spend your finds to raise tiers and improve the drop rates on the
+              maps you want to run again and again.
             </p>
           </div>
           <div className="atlas-node-card">
@@ -124,11 +124,11 @@ export default function AtlasMaps() {
               PINNACLE
             </div>
             <h3 style={{ marginTop: "0.7rem", fontSize: "1.2rem" }}>
-              De højeste tiers
+              The highest tiers
             </h3>
             <p style={{ marginTop: "0.5rem", color: "var(--color-muted)", fontSize: "0.95rem" }}>
-              Når du når toppen venter de hårdeste encounters og de mest
-              eftertragtede unikke drops på serveren.
+              Reach the top and the hardest encounters await — along with the
+              most sought-after unique drops on the server.
             </p>
           </div>
         </div>

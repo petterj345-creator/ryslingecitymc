@@ -23,13 +23,13 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ryslinge City — Dansk MMORPG",
+  title: "Ryslinge City — Minecraft MMORPG",
   description:
-    "Dansk Minecraft-MMORPG med endgame-kort, custom bosser, unikke items, klasser og daglige belønninger. Følg udviklingen på vores visionsboard.",
+    "A Minecraft MMORPG with endgame maps, custom bosses, unique items, classes and daily rewards. Follow development on our vision board.",
   openGraph: {
-    title: "Ryslinge City — Dansk MMORPG",
+    title: "Ryslinge City — Minecraft MMORPG",
     description:
-      "Endgame-kort, custom bosser, unikke items, klasser og daglige belønninger.",
+      "Endgame maps, custom bosses, unique items, classes and daily rewards.",
     type: "website",
   },
 };
@@ -41,7 +41,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="da"
+      lang="en"
       className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body>{children}</body>

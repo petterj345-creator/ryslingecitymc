@@ -12,7 +12,7 @@ function Card({ item }: { item: RoadmapItem }) {
       <h4>{item.title}</h4>
       {item.description && <p>{item.description}</p>}
       {item.status === "in_progress" && item.progress > 0 && (
-        <div className="progress" aria-label={`${item.progress}% færdig`}>
+        <div className="progress" aria-label={`${item.progress}% complete`}>
           <span style={{ width: `${item.progress}%` }} />
         </div>
       )}
@@ -34,18 +34,18 @@ export default async function Visionsboard() {
   }
 
   return (
-    <section className="section" id="visionsboard">
+    <section className="section" id="vision-board">
       <div className="container">
-        <span className="eyebrow">Live · Visionsboard</span>
-        <h2 className="section-title">Det vi arbejder på lige nu</h2>
+        <span className="eyebrow">Live · Vision Board</span>
+        <h2 className="section-title">What we're working on right now</h2>
         <p className="section-lead">
-          Følg med i udviklingen i realtid. Boardet opdateres direkte af teamet,
-          så du altid kan se, hvad der er planlagt, i gang og udgivet.
+          Follow development in real time. The board is updated directly by the
+          team, so you can always see what's planned, in progress and released.
         </p>
 
         {failed ? (
           <p className="section-lead" style={{ marginTop: "2rem" }}>
-            Boardet kunne ikke hentes lige nu. Prøv igen om lidt.
+            The board couldn't be loaded right now. Please try again shortly.
           </p>
         ) : (
           <div className="board">
@@ -62,7 +62,7 @@ export default async function Visionsboard() {
                   </div>
                   {col.length === 0 ? (
                     <p style={{ color: "var(--color-faint)", fontSize: "0.88rem" }}>
-                      Ingenting her endnu.
+                      Nothing here yet.
                     </p>
                   ) : (
                     col.map((item) => <Card key={item.id} item={item} />)

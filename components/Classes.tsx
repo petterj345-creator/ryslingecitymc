@@ -1,40 +1,40 @@
 const classes = [
   {
     glyph: "⚔",
-    name: "Kriger",
-    kicker: "Nærkamp · Tank",
-    desc: "Stå i frontlinjen, hold fjenderne væk fra holdet og slå hårdt tilbage.",
+    name: "Warrior",
+    kicker: "Melee · Tank",
+    desc: "Hold the front line, keep enemies off your team, and hit back hard.",
   },
   {
     glyph: "✦",
-    name: "Magiker",
-    kicker: "Magi · Burst",
-    desc: "Kontrollér slagmarken med elementar-magi og enorm enkelt-mål skade.",
+    name: "Mage",
+    kicker: "Magic · Burst",
+    desc: "Control the battlefield with elemental magic and massive single-target damage.",
   },
   {
     glyph: "➶",
-    name: "Jæger",
-    kicker: "Afstand · Mobilitet",
-    desc: "Hurtig, mobil og dødelig på afstand. Pluk fjender af, før de når dig.",
+    name: "Hunter",
+    kicker: "Ranged · Mobility",
+    desc: "Fast, mobile and deadly at range. Pick enemies off before they reach you.",
   },
   {
     glyph: "❂",
-    name: "Helbreder",
-    kicker: "Støtte · Sustain",
-    desc: "Hold holdet i live gennem de hårdeste encounters med buffs og heals.",
+    name: "Healer",
+    kicker: "Support · Sustain",
+    desc: "Keep the team alive through the hardest encounters with buffs and heals.",
   },
 ];
 
 export default function Classes() {
   return (
-    <section className="section" id="klasser">
+    <section className="section" id="classes">
       <div className="container">
-        <span className="eyebrow">Custom · Klasser</span>
-        <h2 className="section-title">Vælg din rolle</h2>
+        <span className="eyebrow">Custom · Classes</span>
+        <h2 className="section-title">Choose your role</h2>
         <p className="section-lead">
-          Hver klasse har sine egne evner og skill-træer. Find den spillestil,
-          der passer dig — og respec mellem sæsoner, hvis du vil prøve noget
-          nyt.
+          Each class has its own abilities and skill trees. Find the playstyle
+          that suits you — and respec between seasons if you want to try
+          something new.
         </p>
 
         <div className="grid-auto">
