@@ -90,7 +90,10 @@ export default function StorePage() {
                   {r.popular && <span className="store-badge">Most popular</span>}
                   <div className="rarity">Rank</div>
                   <div className="iname">{r.name}</div>
-                  <div className="rank-price">{price(r)}</div>
+                  <div className="rank-price">
+                    {price(r)}
+                    <span className="per">/ month</span>
+                  </div>
                   <p className="store-tagline">{r.tagline}</p>
                   <ul className="perks">
                     {r.perks.map((perk) => (
@@ -110,8 +113,9 @@ export default function StorePage() {
             </div>
 
             <p className="store-note">
-              Purchases are processed securely off-site. Rewards are delivered to
-              your in-game account automatically.{" "}
+              Ranks are billed monthly and can be cancelled anytime. Crates are a
+              one-time purchase. Everything is processed securely off-site and
+              delivered to your in-game account automatically.{" "}
               <Link href="/">← Back to the site</Link>
             </p>
           </div>

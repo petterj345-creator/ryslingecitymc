@@ -733,6 +733,12 @@ h1, h2, h3 {
   color: var(--color-bone);
   margin-top: 0.4rem;
 }
+.rank-price .per {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--color-faint);
+  margin-left: 0.35rem;
+}
 .store-tagline {
   color: var(--color-muted);
   font-size: 0.9rem;
