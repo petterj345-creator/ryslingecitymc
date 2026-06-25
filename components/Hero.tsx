@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { SERVER_IP, DISCORD_URL } from "@/lib/config";
 import AtlasBackdrop from "./AtlasBackdrop";
-import HeroAmbience from "./HeroAmbience";
 import ServerStatus from "./ServerStatus";
 
 export default function Hero() {
@@ -22,7 +21,6 @@ export default function Hero() {
   return (
     <header className="hero" id="top">
       <AtlasBackdrop />
-      <HeroAmbience />
       <div className="container hero-inner">
         <div className="hero-toprow">
           <span className="eyebrow">Survival MMORPG · Towny · Season 1</span>

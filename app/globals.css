@@ -275,15 +275,16 @@ h1, h2, h3 {
   max-width: 38rem;
 }
 
-/* ambient hero motion: drifting orbs + rising embers */
-.hero-fx {
-  position: absolute;
+/* site-wide ambient motion: drifting orbs + rising embers.
+   Fixed, full-viewport, behind all content so it stays visible while scrolling. */
+.site-fx {
+  position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: -1;
   overflow: hidden;
   pointer-events: none;
 }
-.hero-fx .orb {
+.site-fx .orb {
   position: absolute;
   border-radius: 50%;
   animation-name: orb-drift;
@@ -295,7 +296,7 @@ h1, h2, h3 {
   from { transform: translate(0, 0); }
   to { transform: translate(var(--dx), var(--dy)); }
 }
-.hero-fx .mote {
+.site-fx .mote {
   position: absolute;
   bottom: -16px;
   border-radius: 50%;
@@ -306,9 +307,9 @@ h1, h2, h3 {
 }
 @keyframes mote-rise {
   0% { transform: translateY(0) translateX(0); opacity: 0; }
-  12% { opacity: var(--o); }
-  88% { opacity: var(--o); }
-  100% { transform: translateY(-680px) translateX(var(--x)); opacity: 0; }
+  10% { opacity: var(--o); }
+  90% { opacity: var(--o); }
+  100% { transform: translateY(-102vh) translateX(var(--x)); opacity: 0; }
 }
 .hero h1 {
   font-size: clamp(3rem, 9vw, 6rem);

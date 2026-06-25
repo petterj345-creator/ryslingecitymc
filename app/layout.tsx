@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import CookieConsent from "@/components/CookieConsent";
+import SiteAmbience from "@/components/SiteAmbience";
 
 const fraunces = Fraunces({
   subsets: ["latin"],
@@ -46,6 +47,7 @@ export default function RootLayout({
       className={`${fraunces.variable} ${inter.variable} ${jetbrains.variable}`}
     >
       <body>
+        <SiteAmbience />
         {children}
         <CookieConsent />
       </body>
