@@ -20,11 +20,12 @@ export default function Nav() {
         </a>
         <div className="nav-right">
           <div className="nav-links">
-            <a href="#maps">Maps</a>
-            <a href="#bosses">Bosses</a>
-            <a href="#items">Items</a>
-            <a href="#classes">Classes</a>
-            <a href="#vision-board">Vision Board</a>
+            <a href="/#towns">Towns</a>
+            <a href="/#maps">Maps</a>
+            <a href="/#bosses">Bosses</a>
+            <a href="/#classes">Classes</a>
+            <a href="/store">Store</a>
+            <a href="/#vision-board">Vision Board</a>
           </div>
           <a
             className="nav-discord"

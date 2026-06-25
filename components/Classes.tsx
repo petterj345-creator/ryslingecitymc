@@ -12,16 +12,16 @@ const classes = [
     desc: "Control the battlefield with elemental magic and massive single-target damage.",
   },
   {
-    glyph: "➶",
-    name: "Hunter",
-    kicker: "Ranged · Mobility",
-    desc: "Fast, mobile and deadly at range. Pick enemies off before they reach you.",
+    glyph: "🛡",
+    name: "Paladin",
+    kicker: "Melee · Support",
+    desc: "A holy frontline that shields allies and smites enemies with divine power.",
   },
   {
-    glyph: "❂",
-    name: "Healer",
-    kicker: "Support · Sustain",
-    desc: "Keep the team alive through the hardest encounters with buffs and heals.",
+    glyph: "🗡",
+    name: "Rogue",
+    kicker: "Stealth · Crit",
+    desc: "Strike from the shadows with high crit and speed, then vanish before they react.",
   },
 ];
 

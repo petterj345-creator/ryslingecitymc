@@ -23,16 +23,16 @@ export default function Hero() {
       <AtlasBackdrop />
       <div className="container hero-inner">
         <div className="hero-toprow">
-          <span className="eyebrow">Minecraft MMORPG · Season 1</span>
+          <span className="eyebrow">Survival MMORPG · Towny · Season 1</span>
           <ServerStatus />
         </div>
         <h1>
           Ryslinge <span className="accent">City</span>
         </h1>
         <p className="hero-sub">
-          A Minecraft MMORPG built around the endgame: generated maps, custom
-          bosses, unique items and classes with real depth. Sharpen your build —
-          the world is waiting.
+          A survival MMORPG with Towny at its heart — found a town, claim your
+          land, and push into a deep endgame of generated maps, custom bosses
+          and unique loot.
         </p>
 
         <div className="loot-chip">

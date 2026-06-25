@@ -1,8 +1,12 @@
-const days = [
-  { d: "Day 1", reward: "🪙", amt: "Coins" },
+import Coin from "./Coin";
+
+type Day = { d: string; reward: React.ReactNode; amt: string; big?: boolean };
+
+const days: Day[] = [
+  { d: "Day 1", reward: <Coin />, amt: "Coins" },
   { d: "Day 2", reward: "🧪", amt: "Buffs" },
   { d: "Day 3", reward: "🗝", amt: "Map key" },
-  { d: "Day 4", reward: "🪙", amt: "Coins ×2" },
+  { d: "Day 4", reward: <Coin />, amt: "Coins ×2" },
   { d: "Day 5", reward: "📦", amt: "Loot crate" },
   { d: "Day 6", reward: "🧪", amt: "Buffs ×2" },
   { d: "Day 7", reward: "💎", amt: "Rare crate", big: true },

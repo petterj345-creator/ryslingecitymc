@@ -434,6 +434,10 @@ h1, h2, h3 {
 .tile.klass:hover { border-color: var(--color-arcane); }
 .tile.klass .tile-kicker { color: var(--color-arcane-bright); }
 
+/* town accent */
+.tile.town:hover { border-color: var(--color-magic); }
+.tile.town .tile-kicker { color: var(--color-magic); }
+
 /* ---------- loot-tooltip item cards ---------- */
 .loot-grid {
   display: grid;
@@ -668,6 +672,170 @@ h1, h2, h3 {
   border-radius: 9px;
   padding: 0.7rem 0.9rem;
   margin-bottom: 1.4rem;
+}
+
+/* ---------- store ---------- */
+.store-hero { padding-bottom: 2.5rem; }
+
+.rank-grid {
+  display: grid;
+  gap: 1.2rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  margin-top: 1.8rem;
+}
+
+.store-card {
+  --rarity: var(--color-gold);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--rarity) 40%, transparent);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--rarity) 10%, transparent), transparent 50%),
+    var(--color-panel);
+  padding: 1.5rem;
+}
+.store-card.popular {
+  border-color: var(--rarity);
+  box-shadow: 0 24px 60px -32px color-mix(in srgb, var(--rarity) 75%, transparent);
+}
+.store-badge {
+  position: absolute;
+  top: -11px;
+  left: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.6rem;
+  border-radius: 99px;
+  background: var(--rarity);
+  color: #1a1206;
+  font-weight: 600;
+}
+.store-card .rarity {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--rarity);
+}
+.store-card .iname {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: color-mix(in srgb, var(--rarity) 60%, var(--color-bone));
+  margin-top: 0.2rem;
+}
+.rank-price {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--color-bone);
+  margin-top: 0.4rem;
+}
+.store-tagline {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+.perks {
+  list-style: none;
+  padding: 0;
+  margin: 1.1rem 0 1.4rem;
+  display: grid;
+  gap: 0.5rem;
+  flex: 1;
+}
+.perks li {
+  position: relative;
+  padding-left: 1.3rem;
+  font-size: 0.9rem;
+  color: var(--color-bone);
+}
+.perks li::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  color: var(--rarity);
+  font-size: 0.8rem;
+}
+.buy-btn { width: 100%; margin-top: auto; }
+.store-note {
+  margin-top: 2.5rem;
+  color: var(--color-faint);
+  font-size: 0.9rem;
+}
+.store-note a { color: var(--color-gold); }
+.store-note a:hover { color: var(--color-gold-bright); }
+
+/* ---------- coin graphic ---------- */
+.coin {
+  display: inline-block;
+  vertical-align: middle;
+  filter: drop-shadow(0 3px 6px rgba(224, 169, 59, 0.35));
+}
+
+/* ---------- admin cog (bottom-right) ---------- */
+.admin-cog {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 60;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-line-strong);
+  background: rgba(20, 18, 31, 0.82);
+  color: var(--color-faint);
+  backdrop-filter: blur(8px);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.4s ease;
+}
+.admin-cog:hover {
+  color: var(--color-gold);
+  border-color: var(--color-gold);
+  transform: rotate(70deg);
+}
+.admin-cog:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* ---------- cookie consent (bottom-left) ---------- */
+.cookie-banner {
+  position: fixed;
+  left: 1rem;
+  bottom: 1rem;
+  z-index: 70;
+  width: min(380px, calc(100vw - 2rem));
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius);
+  background: rgba(20, 18, 31, 0.96);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem;
+  box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.7);
+}
+.cookie-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.cookie-banner p {
+  color: var(--color-muted);
+  font-size: 0.86rem;
+  margin: 0;
+}
+.cookie-actions {
+  display: flex;
+  gap: 0.7rem;
+  margin-top: 1.1rem;
+}
+.cookie-actions .btn {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.88rem;
 }
 
 /* reduced motion */
